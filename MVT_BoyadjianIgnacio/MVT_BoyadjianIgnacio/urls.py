@@ -20,6 +20,6 @@ from familia.views import lista_familia
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('<str:name>/', index),
     path('familiares/', lista_familia),
+    path('<str:name>/', index),
 ]
