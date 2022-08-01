@@ -3,12 +3,12 @@ from django.template import Template, Context, loader
 from datetime import datetime
 
 
-def index(request, name):
+def index(request):
     
-    datos = {"fecha_actual":datetime.now(), "username": name}
+
     
     plantilla = loader.get_template("index.html")
 
-    documento = plantilla.render(datos)
+    documento = plantilla.render()
 
     return HttpResponse(request)
