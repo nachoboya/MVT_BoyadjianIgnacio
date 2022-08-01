@@ -1,16 +1,37 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primer MVT</title>
+
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mi primer MVT</title>
+
 </head>
+
 <body>
-    <h1>Bienvenido {{ username }}</h1>
-    <p>Inicio de sesión: {{ fecha_actual }}</p>
-    <h2>Este es mi primer MVT</h2>
-    <p>Acá van a poder encontrar información inventada sobre una familia inventada</p>
+
+<hr>
+
+{% if familia %}
+
+{% for fami in familia %}
+
+<p><b>Nombre:</b> {{fami.nombre}} | <b>Fecha de Nacimiento:</b> {{fami.fecha_nacimiento}} | <b>Edad:</b> {{fami.edad}} </p>
+
+{% endfor %}
+
+<p>No hay datos cargados</p>
+
+{% endif %}
+
+\
 
 </body>
+
 </html>
